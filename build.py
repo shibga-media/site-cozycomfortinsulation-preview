@@ -60,12 +60,12 @@ img{max-width:100%;height:auto}a{color:var(--blue-d)}h1,h2,h3{line-height:1.2;ma
 .lang{background:var(--ink);color:#fff;font:600 13px/1 system-ui,sans-serif}.lang .wrap{display:flex;justify-content:space-between;align-items:center;padding:8px 20px}
 .lang a{color:#fff;text-decoration:none;padding:4px 8px;border-radius:6px}.lang b{background:var(--orange);color:var(--ink);padding:4px 8px;border-radius:6px}.lang .l{opacity:.85;font-weight:500}
 header.top{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}header.top .wrap{display:flex;align-items:center;gap:20px;padding:10px 20px}
-.logo img{height:62px;width:auto;display:block}nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;align-items:center}nav a{color:var(--ink);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:8px}nav a:hover,nav a.on{background:var(--soft);color:var(--blue-d)}
+.logo img{height:72px;border-radius:6px;width:auto;display:block}nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;align-items:center}nav a{color:var(--ink);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:8px}nav a:hover,nav a.on{background:var(--soft);color:var(--blue-d)}
 .btn{display:inline-block;background:var(--orange);color:var(--ink)!important;font-weight:800;border-radius:999px;padding:14px 26px;text-decoration:none;border:0;cursor:pointer;font-size:17px}.btn:hover{filter:brightness(.95)}
 .btn.line{background:transparent;border:2px solid #fff;color:#fff!important}.btn.blue{background:var(--blue);color:#fff!important}
 .hero{background:linear-gradient(135deg,var(--blue-d),var(--blue) 60%,#4a97d6);color:#fff;padding:72px 0 80px}.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
 .hero p.lead{font-size:20px;opacity:.95;max-width:560px}.hero .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
-.hero .card{background:#fff;border-radius:18px;padding:22px;color:var(--ink);box-shadow:0 14px 40px rgba(0,0,0,.25)}.hero .card img{width:100%;max-width:300px;display:block;margin:0 auto}
+.hero .card{background:#fff;border-radius:18px;padding:14px;color:var(--ink);box-shadow:0 14px 40px rgba(0,0,0,.25)}.hero .card img{width:100%;max-width:400px;display:block;margin:0 auto}
 .trust{background:var(--soft);border-bottom:1px solid var(--line)}.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:22px 20px}.trust div{font-size:14px;color:#445}.trust b{display:block;font-size:16px;color:var(--ink)}
 section.s{padding:68px 0}section.alt{background:var(--soft)}.sec-h{max-width:680px;margin-bottom:34px}.sec-h p{color:#455;margin:0}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card2{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;border-top:5px solid var(--blue)}.card2:nth-child(3n+2){border-top-color:var(--orange)}.card2:nth-child(3n){border-top-color:var(--green)}.card2 p{margin:0 0 14px;color:#445}.card2 a.more{font-weight:700;text-decoration:none}
@@ -95,7 +95,7 @@ def page(slug, es, body):
 <link rel="alternate" hreflang="en" href="{'../' if es else ''}{slug}.html"><link rel="alternate" hreflang="es" href="{'' if es else 'es/'}{slug}.html"><link rel="alternate" hreflang="x-default" href="{'../' if es else ''}{slug}.html">
 <link rel="icon" href="{pre}assets/favicon.png"><link rel="apple-touch-icon" href="{pre}assets/favicon-192.png"><link rel="stylesheet" href="{pre}assets/site.css"></head><body>
 {switch}
-<header class="top"><div class="wrap"><a class="logo" href="{'index.html'}"><img src="{pre}assets/logo.png" alt="Cozy Comfort Insulation" width="130" height="62"></a><nav>{nav}<a class="btn blue" href="tel:{PHONE_TEL}" style="padding:10px 18px">{t(P['call'],es)} {PHONE_DISPLAY}</a></nav></div></header>
+<header class="top"><div class="wrap"><a class="logo" href="{'index.html'}"><img src="{pre}assets/logo.png" alt="Cozy Comfort Insulation" width="145" height="72"></a><nav>{nav}<a class="btn blue" href="tel:{PHONE_TEL}" style="padding:10px 18px">{t(P['call'],es)} {PHONE_DISPLAY}</a></nav></div></header>
 {body}
 <footer><div class="wrap"><div><b style="color:#fff">Cozy Comfort Insulation</b><br>{t(P['lic'],es)}<br>{t(("California insulation contractor","Contratista de aislamiento en California"),es)}</div>
 <div>{t(('Phone','Teléfono'),es)}: <a href="tel:{PHONE_TEL}">{PHONE_DISPLAY}</a><br><a href="#" data-cozy-chat>{cta}</a></div>
@@ -117,7 +117,7 @@ def home(es):
 <h1>{t(("Stay comfortable all year. Pay less to heat and cool your home.","Comodidad todo el año. Pague menos por calentar y enfriar su hogar."),es)}</h1>
 <p class="lead">{t(("Cozy Comfort Insulation installs attic, blown-in, spray foam and crawl space insulation for California homes and businesses. Licensed and insured.","Cozy Comfort Insulation instala aislamiento de ático, soplado, espuma en aerosol y de espacio de acceso en hogares y negocios de California. Con licencia y seguro."),es)}</p>
 <div class="acts"><a class="btn" href="#" data-cozy-chat>{t(P['cta'],es)}</a><a class="btn line" href="tel:{PHONE_TEL}">{t(P['call'],es)} {PHONE_DISPLAY}</a></div></div>
-<div class="card"><img src="{'../' if es else ''}assets/logo.png" alt="Cozy Comfort Insulation" width="300" height="226"></div></div></section>
+<div class="card"><img src="{'../' if es else ''}assets/logo.png" alt="Cozy Comfort Insulation" width="400" height="199"></div></div></section>
 <div class="trust"><div class="wrap">{trust}</div></div>
 <section class="s"><div class="wrap"><div class="sec-h"><h2>{t(("Our insulation services","Nuestros servicios de aislamiento"),es)}</h2><p>{t(("The right material in the right place, installed properly the first time.","El material correcto en el lugar correcto, instalado bien desde la primera vez."),es)}</p></div><div class="grid">{sv}</div></div></section>
 <section class="s alt"><div class="wrap"><div class="sec-h"><h2>{t(("How it works","Cómo trabajamos"),es)}</h2></div><div class="steps">
@@ -139,7 +139,7 @@ def about(es):
 <p>{t(("We keep it simple. We look at your home, tell you honestly what it needs, quote it clearly, and do the work carefully. No pressure and no surprises.","Lo hacemos simple. Revisamos su casa, le decimos con honestidad lo que necesita, cotizamos con claridad y hacemos el trabajo con cuidado. Sin presión y sin sorpresas."),es)}</p>
 <ul class="ck"><li>{t((f"California CSLB C-2 licence #{LIC}",f"Licencia CSLB C-2 de California n.º {LIC}"),es)}</li><li>{t(("General liability and workers' compensation insurance","Seguro de responsabilidad civil y compensación laboral"),es)}</li><li>{t(("Free inspections and estimates","Inspecciones y cotizaciones gratis"),es)}</li></ul>
 <p><a class="btn" href="#" data-cozy-chat>{t(P['cta'],es)}</a></p></div>
-<div class="card2" style="text-align:center"><img src="{'../' if es else ''}assets/logo.png" alt="Cozy Comfort Insulation" width="300" height="226" style="max-width:300px"></div></div></section>"""
+<div class="card2" style="text-align:center"><img src="{'../' if es else ''}assets/logo.png" alt="Cozy Comfort Insulation" width="400" height="199" style="max-width:400px"></div></div></section>"""
 
 def contact(es):
     return f"""<div class="phead"><div class="wrap"><h1>{t(("Contact us","Contáctenos"),es)}</h1><p>{t(("The fastest way: tell us a little about your project and pick a time. We will call you.","La forma más rápida: cuéntenos un poco sobre su proyecto y elija una hora. Nosotros le llamamos."),es)}</p></div></div>
